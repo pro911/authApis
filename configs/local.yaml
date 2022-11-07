@@ -1,0 +1,46 @@
+base:
+  is_debug: true
+
+http:
+  port: 8001
+
+mysql:
+  username: "test_read_only"
+  passport: "db#01^st$Post"
+  host: "rm-2zem14s80lyu5c4z7.mysql.rds.aliyuncs.com"
+  port: 3306
+  dbname: "apipost_dbv3_test_720"
+  charset: "utf8mb4"
+
+redis:
+  host: "172.17.101.191"
+  port: 6398
+  database: 6
+  username: "root"
+  password: "apipost"
+
+mongodb:
+  #dsn: "mongodb://test:MyGlDiiKMtOL07EO@dds-8vb14448e6c8d6241844-pub.mongodb.zhangbei.rds.aliyuncs.com:3717/apipost_dbv3?replicaSet=mgset-509843895"
+  #  dsn: "mongodb://test:MyGlDiiKMtOL07EO@dds-8vb14448e6c8d6241844-pub.mongodb.zhangbei.rds.aliyuncs.com:3717,dds-8vb14448e6c8d6242956-pub.mongodb.zhangbei.rds.aliyuncs.com:3717/apipost_dbv3?replicaSet=mgset-509843895"
+  dsn: "mongodb://test:MyGlDiiKMtOL07EO@172.17.18.255:27017/apipost_dbv3"
+  database: "apipost_dbv3"
+  pool_size: 5
+
+jwt:
+  issuer: "dcm"
+  secret: "dcm#456"
+
+proof:
+  info_log: "./logs/application.log"
+  err_log: "./logs/application_err.log"
+
+sfs:
+  domain: "https://img.cdn.apipost.cn"
+  endpoint: "https://oss-cn-beijing.aliyuncs.com"
+
+oss:
+  id: 'LTAI5t82LxqXwoDnhwZDgosM'
+  secret: 'Wb8LAEJaxYOjJhN7AWyDvTv5PbjTUY'
+  endpoint: "https://oss-cn-beijing.aliyuncs.com"
+  bucket: "apipost"
+  domain: "https://img.cdn.apipost.cn"
